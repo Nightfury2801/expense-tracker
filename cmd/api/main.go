@@ -15,6 +15,7 @@ func main() {
 	db := database.ConnectDB(cfg)
 	defer db.Close()
 
+	
 	r := chi.NewRouter()
 
 	r.Get("/health", func(w http.ResponseWriter, r *http.Request) {
